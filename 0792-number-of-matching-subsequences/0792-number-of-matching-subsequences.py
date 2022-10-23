@@ -23,4 +23,9 @@ class Solution(object):
                 j += 1
             else:
                 i += 1
-        return True if j == len(word) else False
+            if j == len(word):
+                return True
+        return False
+    
+    # matching subsequence 这一类的题目怎么做？！！！
+    
