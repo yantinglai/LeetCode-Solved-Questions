@@ -10,6 +10,9 @@ class Solution(object):
         right = 0
         check = set()
         
+        # 经验：如果是涉及到这种要去重，有时候指针要动，有时候不要动的情况，最好就不要写for loop
+        # 用 while loop是最好的，因为你可以决定究竟什么时候去移动这个指针！
+        
         while right < len(s):
             while s[right] in check:
                 check.remove(s[left])
