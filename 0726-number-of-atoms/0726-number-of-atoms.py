@@ -13,8 +13,8 @@ class Solution(object):
                 stack.append(collections.Counter())
                 i += 1
             elif c == ")":
-                cur_counter = stack.pop() # step1: get the cur_counter
-                # find the mulfiplier after the ")"
+                cur_counter = stack.pop() 
+                print("cur_count",cur_counter)
                 i += 1 # 跳过右括号
                 start = i 
                 while i < n and formula[i].isdigit():
@@ -28,10 +28,11 @@ class Solution(object):
                 # find the normal atom case:
                 atom = c
                 i += 1
+                # check if it is the same atom but lower letter
                 start = i
                 while i < n and formula[i].islower():
                     i += 1
-                atom += formula[start:i]
+                atom += formula[start:i] 
                 # find the number
                 start = i
                 while i < n and formula[i].isdigit():
