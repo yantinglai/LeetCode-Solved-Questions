@@ -15,8 +15,8 @@ class Solution(object):
             elif c == ")":
                 cur_counter = stack.pop() # step1: get the cur_counter
                 # find the mulfiplier after the ")"
-                i += 1
-                start =  i
+                i += 1 # 跳过右括号
+                start = i 
                 while i < n and formula[i].isdigit():
                         i += 1
                 multiplier = int(formula[start:i]) if formula[start:i] else 1
@@ -32,7 +32,6 @@ class Solution(object):
                 while i < n and formula[i].islower():
                     i += 1
                 atom += formula[start:i]
-                
                 # find the number
                 start = i
                 while i < n and formula[i].isdigit():
