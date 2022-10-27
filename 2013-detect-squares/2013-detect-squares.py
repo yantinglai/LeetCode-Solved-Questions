@@ -21,7 +21,7 @@ class DetectSquares(object):
         for x, y in self.d.keys():
             if (abs(px-x) != abs(py-y)) or px == x or py == y:
                 continue
-            res += self.d[(x,py)] * self.d[(px,y)] * self.d[(x,y)]
+            res += self.d[(x,py)] * self.d[(px,y)]  * self.d[(x,y)]
         return res
 
 # Your DetectSquares object will be instantiated and called as such:
