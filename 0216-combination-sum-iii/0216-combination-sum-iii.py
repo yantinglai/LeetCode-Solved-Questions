@@ -20,7 +20,6 @@ class Solution:
                 i += 1    
                 
         backtracking(1,k,n,0)
-        
         final_res = []
         
         for item in res:
