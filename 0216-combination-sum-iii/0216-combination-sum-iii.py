@@ -27,7 +27,4 @@ class Solution:
             check = set(item)
             if check not in final_res:
                 final_res.append(check)
-            else:
-                continue
-
         return final_res
