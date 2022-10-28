@@ -12,9 +12,10 @@ class Solution:
             for i in range(startIndex, 10 - (k-len(path))+1):
                 total += i
                 path.append(i)
-                backtracking(i+1, k, n,total)
+                backtracking(startIndex+1, k, n,total)
                 path.pop()
                 total -= i 
+                startIndex += 1
                 
         backtracking(1,k,n,0)
 #         final_res = []
