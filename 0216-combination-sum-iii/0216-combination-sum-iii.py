@@ -9,7 +9,7 @@ class Solution:
             if len(path) == k and total == n:
                     res.append(path[:])
                     return
-            for i in range(startIndex, 10):
+            for i in range(startIndex, 10 - (k-len(path))+1):
                 total += i
                 path.append(i)
                 backtracking(i+1, k, n,total)
