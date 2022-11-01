@@ -17,3 +17,9 @@ class Solution(object):
                     d[cur_word] = max(d[prev_word]+1, d[cur_word])
         return max(d.values())
         
+        # a:1
+        # b:1
+        # ba:2
+        # bca:3
+        # bda:3
+        # bdca:4
