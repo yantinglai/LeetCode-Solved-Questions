@@ -7,8 +7,7 @@ class Solution:
                 continue
             if char.isalnum():
                 res += char
-            else:
-                continue
+            
         print(res)
         left = 0
         right = len(res) - 1
