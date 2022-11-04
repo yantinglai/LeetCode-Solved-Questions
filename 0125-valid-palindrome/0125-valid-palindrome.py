@@ -8,7 +8,7 @@ class Solution:
             if char.isalnum():
                 res += char
             
-        print(res)
+    
         left = 0
         right = len(res) - 1
         while left <= right:
