@@ -16,6 +16,10 @@ class MyCalendar:
         self.calendar.append([start,end])
         return True
             
+    # 解题思路：
+    # # 遍历res 里面的所有元素，一个一个的和 当前的 start, end 进行比较
+    # 能够插入的条件是：所有的元素和我这个start以及end都没有交集的时候，把所有元素遍历完之后，append -      return True
+    # 一旦发现有交集，return false
                 
             
 
