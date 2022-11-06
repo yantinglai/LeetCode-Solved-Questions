@@ -14,14 +14,13 @@ class Solution:
             if dp[r][c] != 1:  # if it is already visited, return this value
                 return dp[r][c] # where do you initialize the res?
             
-            res = 1
-            res = max(res, dfs(r+1,c,matrix[r][c]) + 1)
-            res = max(res, dfs(r-1,c,matrix[r][c]) + 1)
-            res = max(res, dfs(r,c+1,matrix[r][c]) + 1)
-            res = max(res, dfs(r,c-1,matrix[r][c]) + 1)
             
-            dp[r][c] = res
-            return res
+            dp[r][c] = max(dp[r][c], dfs(r+1,c,matrix[r][c]) + 1)
+            dp[r][c] = max(dp[r][c], dfs(r-1,c,matrix[r][c]) + 1)
+            dp[r][c] = max(dp[r][c], dfs(r,c+1,matrix[r][c]) + 1)
+            dp[r][c] = max(dp[r][c], dfs(r,c-1,matrix[r][c]) + 1)
+            
+            return dp[r][c]
         
         for i in range(m):
             for j in range(n):
