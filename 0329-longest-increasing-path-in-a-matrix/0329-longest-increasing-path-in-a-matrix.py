@@ -27,5 +27,14 @@ class Solution:
             for j in range(n):
                 dfs(i,j,-1)
         
-        return np.max(dp)
+        # return np.max(dp) 
+        
+        ans = 0
+        for i in range(m):
+            for j in range(n):
+                ans = max(ans, dp[i][j])
+        return ans
+        
+    
+    # find max in 2D array: using numpy: return np.max(dp)
     
