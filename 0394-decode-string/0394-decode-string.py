@@ -12,8 +12,6 @@ class Solution:
                 while stack and stack[-1].isdigit():
                     multiplier = stack.pop() + multiplier 
                 stack.append(int(multiplier) * inner_str)
-#                 continue
-      
             else:
                 stack.append(c)
         return "".join(stack)
