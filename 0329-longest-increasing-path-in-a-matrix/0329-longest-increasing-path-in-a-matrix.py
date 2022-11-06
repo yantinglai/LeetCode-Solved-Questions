@@ -20,7 +20,6 @@ class Solution:
             res = max(res, dfs(r-1,c,matrix[r][c]) + 1)
             res = max(res, dfs(r,c+1,matrix[r][c]) + 1)
             res = max(res, dfs(r,c-1,matrix[r][c]) + 1)
-         
             dp[r][c] = res
             return res
         
@@ -29,11 +28,5 @@ class Solution:
                 dfs(i,j,-1)  # prev_val set as -1 
         return np.max(dp) 
     
-        # ans = 0
-        # for i in range(m):
-        #     for j in range(n):
-        #         ans = max(ans, dp[i][j])
-        # return ans
         
-    # find max in 2D array: using numpy: return np.max(dp)
     
