@@ -3,19 +3,18 @@ class Solution:
         d = defaultdict(list)
         for cur,pre in prerequisites:
             d[pre].append(cur)
-     
         
-        m = defaultdict(list)
-        for item in prerequisites:
-            if item[0] not in m:
-                m[item[0]] = [item[1]]
-            else:
-                m[item[0]].append(item[1])
+#         m = defaultdict(list)
+#         for item in prerequisites:
+#             if item[0] not in m:
+#                 m[item[0]] = [item[1]]
+#             else:
+#                 m[item[0]].append(item[1])
       
 
         arr = [0 ] * (numCourses)
-        for key in m:
-            arr[key] = len(m[key])
+        for cur,pre in prerequisites:
+            arr[cur] += 1
         
         q = []
         n = numCourses 
